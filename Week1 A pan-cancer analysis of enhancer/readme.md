@@ -34,7 +34,7 @@
 
    ![CGeZX8.png](https://s1.ax1x.com/2018/04/29/CGeZX8.png)
 
-###二、Global Enhancer Activation in Cancer Is Positively Associated with Tumor Aneuploidy
+### 二、Global Enhancer Activation in Cancer Is Positively Associated with Tumor Aneuploidy
 
 第二部分，探索癌症中增强子表达与somatic copy-number alteration (SCNA) 、 point mutation两个最常见的体细胞突变之间的联系。
 
@@ -62,7 +62,7 @@
 
    ![CGen0g.png](https://s1.ax1x.com/2018/04/29/CGen0g.png)
 
-2. 利用全基因组测序得到的SCNA和突变数据验证假设模型。将人类基因组划分为2663个1-Mb的片段，使用来自COSMIC的全基因组数据计算每个片段的突变率和DNA双链断裂率（DSB），计算片段上所有增强子区域的平均RPKM。DNase hypersensitivity 和 histone-modifications来自于ENCODE ChIP-seq数据，DNA-DNA互作密度使用Hi-C数据。然后分别计算这3个数值与5个基因组特征的Spearman’s correlation coefficients（p<10^ -16 ^）。
+2. 利用全基因组测序得到的SCNA和突变数据验证假设模型。将人类基因组划分为2663个1-Mb的片段，使用来自COSMIC的全基因组数据计算每个片段的突变率和DNA双链断裂率（DSB），计算片段上所有增强子区域的平均RPKM。DNase hypersensitivity 和 histone-modifications来自于ENCODE ChIP-seq数据，DNA-DNA互作密度使用Hi-C数据。然后分别计算这3个数值与5个基因组特征的Spearman’s correlation coefficients（p<10^-16^）。
 
    ![CGemnS.png](https://s1.ax1x.com/2018/04/29/CGemnS.png)
 
@@ -96,7 +96,7 @@
 
    * 2). 构建基因集：组合了clinically actionable genes (i.e., biomarkers or therapeutic targets) (n = 126), [OncoKB](http://oncokb.org/) (n = 476), 和 [CGC](https://cancer.sanger.ac.uk/census)(n = 567)一共882个癌症基因集；
 
-   * 3). co-expression分析：要求在33个癌症类型中≥4个类型中absolute Spearman’s rho > 0.3 并且FDR < 10^ -4 ^；
+   * 3). co-expression分析：要求在33个癌症类型中≥4个类型中absolute Spearman’s rho > 0.3 并且FDR < 10^-4^；
 
    * 4). 推断因果关系：判断给定enhancer-gene共表达对的enhancer上的SNP是否是gene的eQTL；
 
@@ -141,7 +141,7 @@
 
    * 2). 使用[CCLE](https://portals.broadinstitute.org/ccle)数据集的130个肺癌细胞系验证这个共表达；
 
-     ![](Figure6_B.png)
+     ![CGeU74.png](https://s1.ax1x.com/2018/04/29/CGeU74.png)
 
    * 3). 某个*PD-L1*的eQTL紧靠enhancer9表明enhancer9作为上游调控分子；
 
