@@ -1,6 +1,6 @@
-[![](title.PNG)][1]
+![](title.PNG)
 
-##Abstract
+## Abstract
 
 ​	这是4月份发表在Cell上的一篇数据挖掘类的文章，研究对象是==增强子==。作者的工作可以划分为5个部分：
 
@@ -16,9 +16,9 @@
 
 ​        文章第一部分描绘了增强子在人类癌症中的全局表达情况；第二部分探索了癌症中增强子表达和体细胞突变的联系；第三部分基于第二部分的结果建立了一个解释模型然后进行验证；第四部分开发了一个推断enhancer-gene直接因果互作关系的计算流程；第五部分具体分析了第四部分挖掘出的关系对中的两对。
 
-##RESULTS
+## RESULTS
 
- ###一、Overview of Enhancer Expression in Human Cancers
+ ### 一、Overview of Enhancer Expression in Human Cancers
 
 第一部分，使用TCGA的RNA-seq数据表征增强子在人类癌症中的表达。
 
@@ -26,7 +26,7 @@
 
    ![](FigureS1_A.png)
 
-2. 分析这15808个增强子及其侧翼1-kb的染色质状态（==DNase hypersensitivity==, ==p300 binding==, ==CTCF binding==, ==H3K27Ac==和==H3K4Me1==）。结果证实了这15808个增强子是真正的增强子，而不是其它转录单位或转录噪声。
+2. 分析这15808个增强子及其侧翼1-kb的染色质状态（== DNase hypersensitivity ==, == p300 binding ==, == CTCF binding ==, == H3K27Ac ==和== H3K4Me1 ==）。结果证实了这15808个增强子是真正的增强子，而不是其它转录单位或转录噪声。
 
    ![](Figure1_B.png)
 
@@ -38,7 +38,7 @@
 
 第二部分，探索癌症中增强子表达与somatic copy-number alteration (SCNA) 、 point mutation两个最常见的体细胞突变之间的联系。
 
-1. 首先，使用来自Affymetrix SNP6.0 arrays的==aneuploidy 值==[^定义]、来自whole-exome sequencing的silent somatic mutations的总数量分别定量全局SCNA水平、mutation burden。对于每一种癌症类型使用Spearman’s correlation analysis探索全局增强子表达水平（RPM）同SCNA、点突变的相关性。结果表明：全局增强子激活水平与SCNA水平正相关，而与点突变没有相关性或微弱的负相关。
+1. 首先，使用来自Affymetrix SNP6.0 arrays的== aneuploidy 值 ==（defined as the fraction of the genome affected by SCNAs）、来自whole-exome sequencing的silent somatic mutations的总数量分别定量全局SCNA水平、mutation burden。对于每一种癌症类型使用Spearman’s correlation analysis探索全局增强子表达水平（RPM）同SCNA、点突变的相关性。结果表明：全局增强子激活水平与SCNA水平正相关，而与点突变没有相关性或微弱的负相关。
 
    ![](Figure2_AB.png)
 
@@ -50,11 +50,11 @@
 
    ![](Figure2_E-H.png)
 
-   4.综上所述，增强子激活与基因组不稳定性的相关性可以概括为一棵树。亚型C1富含高突变载和低异倍性水平的样本；亚型C2富含具有高突变负载和高异倍性水平的样本；亚型C3是“类正常”，具有低的突变和低的异倍性。癌症类型内和癌症类型间的分析都表明SCNAs，而不是点突变，与增强子激活正相关。
+4.综上所述，增强子激活与基因组不稳定性的相关性可以概括为一棵树。亚型C1富含高突变载和低异倍性水平的样本；亚型C2富含具有高突变负载和高异倍性水平的样本；亚型C3是“类正常”，具有低的突变和低的异倍性。癌症类型内和癌症类型间的分析都表明SCNAs，而不是点突变，与增强子激活正相关。
 
    ![](Figure2_I.png)
 
-###三、A ‘‘Chromatin-State’’-Centered Model for the Interplay of Enhancer Activation, SCNAs, and Point Mutations
+### 三、A ‘‘Chromatin-State’’-Centered Model for the Interplay of Enhancer Activation, SCNAs, and Point Mutations
 
 第三部分，针对于上一部分得到的结果，提出一个假设模型，用来解释为什么SCNAs和点突变与癌症中全局增强子的激活有不同的关系（甚至在某种程度上，在某些癌症类型中相反）?
 
@@ -62,7 +62,7 @@
 
    ![](Figure3_A.png)
 
-2. 利用全基因组测序得到的SCNA和突变数据验证假设模型。将人类基因组划分为2663个1-Mb的片段，使用来自COSMIC的全基因组数据计算每个片段的突变率和DNA双链断裂率（DSB），计算片段上所有增强子区域的平均RPKM。DNase hypersensitivity 和 histone-modifications来自于ENCODE ChIP-seq数据，DNA-DNA互作密度使用Hi-C数据。然后分别计算这3个数值与5个基因组特征的Spearman’s correlation coefficients（p<10^-16^）。
+2. 利用全基因组测序得到的SCNA和突变数据验证假设模型。将人类基因组划分为2663个1-Mb的片段，使用来自COSMIC的全基因组数据计算每个片段的突变率和DNA双链断裂率（DSB），计算片段上所有增强子区域的平均RPKM。DNase hypersensitivity 和 histone-modifications来自于ENCODE ChIP-seq数据，DNA-DNA互作密度使用Hi-C数据。然后分别计算这3个数值与5个基因组特征的Spearman’s correlation coefficients（p<10^ -16 ^）。
 
    ![](Figure3_B.png)
 
@@ -74,7 +74,7 @@
 
    ![](Figure3_E.png)
 
-###四、Systematic Identification of Causal Enhancer-Cancer Gene Interactions
+### 四、Systematic Identification of Causal Enhancer-Cancer Gene Interactions
 
 第四部分，识别增强子下游的靶基因，以阐明某个增强子在癌症发育中的分子功能，并评估它们的临床实用性。
 
@@ -96,7 +96,7 @@
 
    * 2). 构建基因集：组合了clinically actionable genes (i.e., biomarkers or therapeutic targets) (n = 126), [OncoKB](http://oncokb.org/) (n = 476), 和 [CGC](https://cancer.sanger.ac.uk/census)(n = 567)一共882个癌症基因集；
 
-   * 3). co-expression分析：要求在33个癌症类型中≥4个类型中absolute Spearman’s rho > 0.3 并且FDR < 10^-4^；
+   * 3). co-expression分析：要求在33个癌症类型中≥4个类型中absolute Spearman’s rho > 0.3 并且FDR < 10^ -4 ^；
 
    * 4). 推断因果关系：判断给定enhancer-gene共表达对的enhancer上的SNP是否是gene的eQTL；
 
@@ -112,7 +112,7 @@
 
    ![](Figure4_D.png)
 
-###五、Enhancers of Actionable Genes Show Potential Clinical Relevance
+### 五、Enhancers of Actionable Genes Show Potential Clinical Relevance
 
 第五部分，具体分析了上面识别的enhancer-cancer gene关系对中的2对。
 
@@ -151,17 +151,17 @@
 
      ![](Figure6_D.png)
 
-   * 7). 在ENCODE项目中研究的161个转录因子中，发现NF-~k~B是唯一与enhancer9有关的注释。ChIP-seq数据表明在enhancer9上和*PD-L1*启动子p65结合域上都有强烈的NF-~k~B结合信号，表明NF-~k~B复合体参与到enhancer9-*PD-L1*的互作，而NF-~k~B二聚体已被报告对*PD-L1*的激活是必要的；
+   * 5). 在ENCODE项目中研究的161个转录因子中，发现NF-~k~B是唯一与enhancer9有关的注释。ChIP-seq数据表明在enhancer9上和*PD-L1*启动子p65结合域上都有强烈的NF-~k~B结合信号，表明NF-~k~B复合体参与到enhancer9-*PD-L1*的互作，而NF-~k~B二聚体已被报告对*PD-L1*的激活是必要的；
 
      ![](Figure6_E.png)
 
-   * 8). 为了验证enhancer9对*PD-L1*表达的因果效应，设计了3对single-guide CRISPR/Cas9 RNAs (sgRNAs)去删除enhancer9。enhancer9的敲除大大缩减了*PD-L1*在mRNA水平和蛋白质水平的表达（~10-fold），并且很大程度地屏蔽了IFN-γ (activating NF-~k~B)对PD-L1表达的诱导效应（~80%缩减）；
+   * 6). 为了验证enhancer9对*PD-L1*表达的因果效应，设计了3对single-guide CRISPR/Cas9 RNAs (sgRNAs)去删除enhancer9。enhancer9的敲除大大缩减了*PD-L1*在mRNA水平和蛋白质水平的表达（~10-fold），并且很大程度地屏蔽了IFN-γ (activating NF-~k~B)对PD-L1表达的诱导效应（~80%缩减）；
 
      ![](Figure6_FG.png)
 
      ![](Figure6_H.png)
 
-   * 9). 总的来说，这些结果表明了NF-~k~B介导的*PD-L1* 激活的enhancer-promoter互作模型。
+   * 7). 总的来说，这些结果表明了NF-~k~B介导的*PD-L1* 激活的enhancer-promoter互作模型。
 
      ![](Figure6_I.png)
 
@@ -169,7 +169,3 @@
 [1]: [Chen H, Li C, Peng X, Zhou Z, Weinstein JN, Cancer Genome Atlas Research N, et al. A Pan-Cancer Analysis of Enhancer Expression in Nearly 9000 Patient Samples. Cell. 2018;173(2):386-99 e12. Epub 2018/04/07. doi: 10.1016/j.cell.2018.03.027. PubMed PMID: 29625054.](https://doi.org/10.1016/j.cell.2018.03.027)
 
 [2]: [Andersson, R., Gebhard, C., Miguel-Escalada, I., Hoof, I., Bornholdt, J., Boyd, M., Chen, Y., Zhao, X., Schmidl, C., Suzuki, T., et al. (2014). An atlas of active enhancers across human cell types and tissues. Nature 507, 455–461.][https://www.nature.com/articles/nature12787]
-
-
-
-[^定义]: defined as the fraction of the genome affected by SCNAs.
