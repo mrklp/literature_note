@@ -1,4 +1,4 @@
-##git安装及使用(windows)
+## git安装及使用(windows)
 
 1. 从官网下载安装程序：<https://git-scm.com/download/>
 2. 配置全局name和email.
