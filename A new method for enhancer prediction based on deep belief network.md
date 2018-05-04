@@ -82,15 +82,47 @@
 
 [![Ctszcj.md.png](https://s1.ax1x.com/2018/05/04/Ctszcj.md.png)](https://imgchr.com/i/Ctszcj)
 
-* 这个联合结构的能量函数可以表示为：
+* RBM训练的相关公式：
 
-  ![CtTX11.png](https://s1.ax1x.com/2018/05/04/CtTX11.png)
+  [![CNEHED.md.png](https://s1.ax1x.com/2018/05/04/CNEHED.md.png)](https://imgchr.com/i/CNEHED)
 
-* 某个配置的联合概率分布由Boltzmann分布决定（这个配置的能量）：
+* A RBM is usually trained as follows：
 
-  
+  * Step 1.  根据训练数据设置可见神经元的状态;
+  * Step 2.  通过(4)计算隐层变量的二进制状态；
+  * Step 3.  在确定所有隐层神经元的状态之后，通过(5)确定所有可见神经元的状态;
+  * Step 4.  通过CD学习算法评估w的梯度，然后执行梯度下降算法更新参数w,a,b；
 
+#### *2.3  Training the EnhancerDBN classifier*
 
+* 将上面训练得到的DBN和另外的输出层连在一起，就构建了我们的EnhancerDBN分类器，然后利用相同的训练数据集以监督学习的方式训练模型；
+* 使用BP算法训练分类器；
+* 使用10折交叉验证，将数据集划分为10个分区，9个分区用去训练（1334个样本），剩下的分区（148个样本）用于测试，10次检验的平均结果作为最终的预测性能；
 
+## Results and discussion
 
+利用10折交叉验证评估提出的方法。首先评估了不同类型的特征在预测错误率方面的预测能力；然后与13个已有的方法在AUC或预测准确度方面进行比较。
+
+### Performance evaluation with different types of features
+
+* 使用不同的特征组合计算模型的错误率，结果表明GC含量和DNA甲基化是与增强子相关的，可以作为增强子预测的有效特征；
+
+  | Feature                               | Error rate |
+  | ------------------------------------- | ---------- |
+  | Histone + Sequence                    | 0.115      |
+  | Histone + Sequence + GC               | 0.102      |
+  | Histone + Sequence + Methylation      | 0.099      |
+  | Histone + Sequence + Methylation + GC | 0.0915     |
+
+### Performance comparison with existing methods
+
+* 首先在ROC方面与EnhancerFinder、CLARE、DEEP、ChromHMM 和Segway进行比较：
+
+  ![CNZuQI.png](https://s1.ax1x.com/2018/05/04/CNZuQI.png)
+
+* 总的来说，与13个现有的方法相比，无论是从准确度的角度还是ROC AUC方面，EnhancerDBN 达到了最佳性能。
+
+## Conclusions
+
+这是篇BMC Bioinformatics的文章，不知道为什么，看完之后感觉有点乏味。接下来准备自己用python再现一遍算法流程，当做是练习编程实践了~ 
 
