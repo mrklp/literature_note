@@ -84,9 +84,7 @@
 
 * 这个联合结构的能量函数可以表示为：
 
-  <center>$E(v,h;\theta)= -\sum_{ij}{w_{ij}v_{ij}h_j}-\sum{b_iv_i}-\sum{a_jh_j}$</center> 
-
-  其中，$\theta=\{W,a,b\}$ 代表模型参数，a~i~ 是可见神经元 i 的偏，b~j~ 是隐层神经元 j 的偏；
+  ![CtTX11.png](https://s1.ax1x.com/2018/05/04/CtTX11.png)
 
 * 某个配置的联合概率分布由Boltzmann分布决定（这个配置的能量）：
 
