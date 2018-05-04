@@ -11,8 +11,8 @@
   * inconsistency of computational models across different cell-lines;
 * EnhancerDBN训练数据集来自于`VISTAEnhancer Browser`，包含生物学验证的增强子样本;
 * EnhancerDBN将预测问题转换为二分类任务，使用一个两步的方案：
-  * **first step：**利用Restricted Boltzmann Machines (RBMs)构建DBN;
-  * **second step：**基于深度神经网络分类器使用`back propagation (BP) `算法训练并优化DBN;
+  * first step：利用Restricted Boltzmann Machines (RBMs)构建DBN;
+  * second step：基于深度神经网络分类器使用`back propagation (BP) `算法训练并优化DBN;
 
 ## Methods
 
